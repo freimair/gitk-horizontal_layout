@@ -2139,7 +2139,7 @@ proc makewindow {} {
     }
 
     # the gui has upper and lower half, parts of a paned window.
-    ${NS}::panedwindow .ctop -orient vertical
+    ${NS}::panedwindow .ctop -orient horizontal
 
     # possibly use assumed geometry
     if {![info exists geometry(pwsash0)]} {
