@@ -3012,7 +3012,7 @@ proc resizecdetpanes {win w} {
         if {$w < 60} {
             set sash0 [expr {int($w*3/4 - 2)}]
         } else {
-            set factor [expr {1.0 * $w / $oldwidth($win)}]
+            set factor 1
             set sash0 [expr {int($factor * [lindex $s0 0])}]
             if {$sash0 < 45} {
                 set sash0 45
