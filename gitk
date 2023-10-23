@@ -2531,7 +2531,7 @@ proc makewindow {} {
     if {$use_ttk} {
         bind .ctop <Map> {
             bind %W <Map> {}
-            %W sashpos 0 $::geometry(topheight)
+            %W sashpos 0 $::geometry(topwidth)
         }
         bind .pwbottom <Map> {
             bind %W <Map> {}
