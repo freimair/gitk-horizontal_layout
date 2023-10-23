@@ -2353,8 +2353,9 @@ proc makewindow {} {
         .ctop paneconfigure .tf -width $geometry(topwidth)
     }
 
+########################################################################################################################## build up bottom
     # now build up the bottom
-    ${NS}::panedwindow .pwbottom -orient horizontal
+    ${NS}::panedwindow .pwbottom -orient vertical
 
     # lower left, a text box over search bar, scroll bar to the right
     # if we know window height, then that will set the lower text height, otherwise
@@ -2535,7 +2536,7 @@ proc makewindow {} {
         }
         bind .pwbottom <Map> {
             bind %W <Map> {}
-            %W sashpos 0 $::geometry(botwidth)
+            %W sashpos 0 $::geometry(botheight)
         }
         bind .pwbottom <Configure> {resizecdetpanes %W %w}
     }
